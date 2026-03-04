@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" href ="style.css"> 
   <title>Leonardo | Portfólio</title>
 </head>
 <body>
@@ -32,16 +33,34 @@
 
   <section id="formacao" class="formacao-academica">
     <h2 class="formacao-titulo">Formação acadêmica</h2>
-    <div class="projetos-caixa">
-      <div class="projetos-card">
-        <!-- Conteúdo da formação aqui -->
+      <div class="projetos-caixa">
+          <div class="formação-card">
+            <img src="Img/Img_Senai.jpg" class ="Imagem-senai">
+            <h2 class = "Titulo-Leonardo">Técnico em Análise e Desenvolvimentos de Sistemas pelo Senai São José dos Campos</h2>
+            <p>Com conhecimentos de back-end Java e Python, front-end com Html Css e Js, Banco de dados com SQL</p>
+          </div>
+
+          <div class="formação-card">
+            <img src="Img/logoFatec.png" class ="Imagem-fatec">
+            <h2 class = "Titulo-Leonardo">Graduando Análise e Desenvolvimentos de Sistemas pela FATEC São José dos Campos</h2>
+            <p>Aprimorando os conhecimentos em python, engenharia de software e desenvolvimento de projetos</p>
+          </div>
       </div>
-    </div>
   </section>
 
-  <section id="contato" class="contato">
-    <h2>Contato</h2>
-    <!-- Conteúdo de contato -->
+  <section id ="Contato" class ="Contato">
+      <h2 class = "contato-titulo">Contato</h2>
+      <form class ="formulario-contato" id ="Formulario">
+        <div class = "nome-form">  
+          <input placeholder="nome" class ="Campo-form">  
+        </div>
+
+        <div class = "grupo-form">
+          <textarea class= "text-form" placeholder = "Digite sua mensagem"></textarea>
+        </div>
+      </form>
+
+
   </section>
 
 </body>
