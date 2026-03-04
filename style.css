@@ -1,28 +1,20 @@
-html, body {
-  height: 100%;
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+html{
+  scroll-behavior: smooth;
 }
 
-main {
-  flex: 1; 
+:root{
+  --primary-color: #4f46e5;
+  --secondary-color: #7c3aed;
+  --escuro: #0f172a;
+  --mais-escuro: #0a0f1c;
+  --claro: #e5e7eb;
+  --vidro: rgba(255, 255, 255, 0.1);
   
-}
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-h1{
-    margin-left: 700px;
-    display: flex;
-    align-items: center;
-    color: #729399;
 }
