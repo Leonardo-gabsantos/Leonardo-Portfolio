@@ -18,3 +18,52 @@ html{
   --vidro: rgba(255, 255, 255, 0.1);
   
 }
+body{
+  background-color: var(--escuro);
+  color: var(--claro);
+  
+}
+
+.navegacao{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(15, 23, 42, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 1000;
+  }
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+  width: 100%; /* faz o ul ocupar toda a largura da nav para que os links fiquem centralizados */
+}
+
+.menu-link{
+  color: var(--claro);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block; /* caixa estável evita reflow quando hover altera aparência */
+  padding: 0.25rem 0.5rem; /* espaço interno fixo para prevenir 'saltos' */
+  line-height: 1;
+  transition: color 0.15s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.menu-link:hover{
+  color: var(--primary-color);
+}
+
+.menu-link:focus{
+  outline: 2px solid rgba(79,70,229,0.25);
+  outline-offset: 3px;
+}
