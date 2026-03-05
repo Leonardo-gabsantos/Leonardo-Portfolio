@@ -149,17 +149,68 @@ h1{
 
 }
 .formacao-titulo{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 
 }
 .projetos-caixa{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 6rem 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
 
 }
 .formação-card{
+  background: rgba(255, 255, 255, 0.08);
+  /* arredondar mais as bordas superiores e deixar inferiores levemente arredondadas */
+  border-radius: 20px 20px 12px 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--vidro);
+  /* permitir que o brilho ultrapasse a caixa */
+  overflow: visible;
+  position: relative;
+  transition: transform 300ms cubic-bezier(.2,.9,.2,1),
+              box-shadow 300ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform, box-shadow;
+}
 
+/* pseudo-elemento para o glow roxo suave atrás do card */
+.formação-card::before{
+  content: '';
+  position: absolute;
+  left: -8%;
+  top: -8%;
+  width: 116%;
+  height: 116%;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(124,58,237,0.14), rgba(79,70,229,0.12));
+  filter: blur(20px);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 300ms ease, transform 300ms ease;
+  z-index: 0;
+}
+
+/* manter o conteúdo do card acima do glow */
+.formação-card > *{
+  position: relative;
+  z-index: 1;
+}
+
+.formação-card:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(79,70,220,0.20),
+              0 0 40px 12px rgba(124,58,237,0.10);
+}
+
+.formação-card:hover::before{
+  opacity: 1;
+  transform: scale(1);
 }
 .Imagem-senai{
   height: 200px;
@@ -167,9 +218,27 @@ h1{
   object-fit: cover;
 
 }
+
+/* garantir que a imagem no topo tenha cantos superiores arredondados para combinar com o card */
+.formação-card .Imagem-senai,
+.formação-card .Imagem-fatec{
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 .Titulo-Leonardo{
 
 }
 .descricao-titulo{
 
+}
+
+.Imagem-fatec{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  
 }
