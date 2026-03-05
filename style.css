@@ -243,6 +243,9 @@ h1{
   
 }
 .contato{
+  padding: 6rem 2rem;
+  border-radius: 16px;
+  
 
 }
 .contato-titulo{
@@ -251,11 +254,14 @@ h1{
   margin-bottom: 20px;
 }
 .formulario-contato{
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
 }
 
 .nome-form, .grupo-form{
@@ -270,7 +276,21 @@ h1{
   background: rgba(255, 255, 255, 0.1);
   color: var(--claro);
   font-size: 1rem;
-  transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.2s ease;
+}
+
+/* purple glow on hover for name and message fields */
+.Campo-form:hover,
+.text-form:hover {
+  box-shadow: 0 0 8px rgba(124,58,237,0.6);
+}
+
+/* custom focus to replace default white outline */
+.Campo-form:focus,
+.text-form:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .grupo-form{
