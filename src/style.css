@@ -346,33 +346,57 @@ h1{
   }
 }
 
+
 @media (max-width: 768px) {
     
+    /* 1. Ajusta o Menu: Empilha os links para não sumirem da tela */
+    .menu {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 10px 0 !important;
+    }
+
     .navegacao {
-        flex-direction: column; 
-        height: auto;
-        padding: 10px 0;
+        position: relative !important; /* Libera o menu para rolar com a página se necessário */
+        padding: 1rem !important;
     }
 
-    .navegacao__link {
-        font-size: 16px; 
-        padding: 5px 0;
+    /* 2. Ajusta o Cabeçalho: Dá espaço para os elementos respirarem */
+    .cabecalho {
+        padding-top: 2rem !important;
+        min-height: auto !important;
+        text-align: center !important;
     }
 
-    .apresentacao__imagem {
-        width: 80%; 
-        max-width: 300px;
-        height: auto; 
-        margin: 0 auto; 
+    /* 3. CONSERTA A FOTO: O segredo para não achatar é o object-fit e manter width/height iguais */
+    .foto-perfil {
+        width: 250px !important;
+        height: 250px !important;
+        object-fit: cover !important; /* Corta as bordas sem esticar o seu rosto */
+        margin-bottom: 20px !important;
     }
 
-    
-    .apresentacao__conteudo {
-        width: 100%;
-        text-align: center;
+    /* 4. Ajusta os Textos: Diminui o tamanho para caber na tela do celular */
+    h1 {
+        font-size: 2rem !important;
+        padding: 0 10px !important;
     }
 
-    .apresentacao_conteudo_titulo {
-        font-size: 24px; 
+    .paragrafo-img {
+        font-size: 1.2rem !important;
+    }
+
+    .sobre-titulo, .formacao-titulo, .contato-titulo {
+        font-size: 2rem !important;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1.1rem !important;
+    }
+
+    /* 5. Ajusta a Grade de Formação: Garante que os cards fiquem um embaixo do outro */
+    .projetos-caixa {
+        grid-template-columns: 1fr !important;
+        padding: 2rem 1rem !important;
     }
 }
