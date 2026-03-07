@@ -346,19 +346,33 @@ h1{
   }
 }
 
-/* Ajuste básico para celulares */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+@media (max-width: 768px) {
     
-    /* Faz com que elementos que estavam lado a lado fiquem um sob o outro */
-    main, section, div {
-        width: 100% !important;
-        flex-direction: column !important;
+    .navegacao {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
     }
-}
-img {
-    max-width: 100%;
-    height: auto;
+
+    .navegacao__link {
+        font-size: 16px; 
+        padding: 5px 0;
+    }
+
+    .apresentacao__imagem {
+        width: 80%; 
+        max-width: 300px;
+        height: auto; 
+        margin: 0 auto; 
+    }
+
+    
+    .apresentacao__conteudo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .apresentacao_conteudo_titulo {
+        font-size: 24px; 
+    }
 }
