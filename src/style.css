@@ -345,3 +345,20 @@ h1{
     transform: translateY(-20px);
   }
 }
+
+/* Ajuste básico para celulares */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    /* Faz com que elementos que estavam lado a lado fiquem um sob o outro */
+    main, section, div {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
