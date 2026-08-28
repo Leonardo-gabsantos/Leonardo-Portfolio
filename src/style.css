@@ -147,13 +147,13 @@ font-size: 1.5rem;
 }
 
 .formacao-academica{
-
+padding: 6rem 2rem;
 }
+
 .formacao-titulo{
 text-align: center;
 font-size: 2.5rem;
-margin-bottom: 10px;
-
+margin-bottom: 2rem;
 }
 .projetos-caixa{
 display: grid;
@@ -231,25 +231,115 @@ border-top-left-radius: 20px;
 border-top-right-radius: 20px;
 }
 .Titulo-Leonardo{
-
+font-size: 1.4rem;
+line-height: 1.5;
+color: var(--claro);
+padding: 1.25rem 1.25rem 0.5rem;
 }
-.descricao-titulo{
 
+.descricao-titulo{
+font-size: 1rem;
+line-height: 1.7;
+color: rgba(229, 231, 235, 0.85);
+padding: 0 1.25rem 1.5rem;
 }
 
 .Imagem-fatec{
 height: 200px;
 width: 100%;
 object-fit: cover;
-
 }
-.contato{
+
+.projetos {
+padding: 6rem 2rem;
+}
+
+.projetos-titulo {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 2rem;
+}
+
+.projetos-list {
+max-width: 1100px;
+margin: 0 auto;
+display: grid;
+gap: 2rem;
+}
+
+.projetos-card {
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid var(--vidro);
+border-radius: 22px;
+overflow: hidden;
+position: relative;
+display: grid;
+grid-template-columns: 1.1fr 1.8fr;
+transition: transform 300ms cubic-bezier(.2,.9,.2,1),
+box-shadow 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+.projetos-card::before {
+content: '';
+position: absolute;
+inset: -8% -5%;
+background: linear-gradient(90deg, rgba(124,58,237,0.14), rgba(79,70,229,0.12));
+filter: blur(20px);
+opacity: 0;
+transform: scale(0.95);
+transition: opacity 300ms ease, transform 300ms ease;
+z-index: 0;
+}
+
+.projetos-card > * {
+position: relative;
+z-index: 1;
+}
+
+.projetos-card:hover {
+transform: translateY(-8px) scale(1.01);
+box-shadow: 0 20px 40px rgba(79,70,220,0.20),
+0 0 40px 12px rgba(124,58,237,0.10);
+}
+
+.projetos-card:hover::before {
+opacity: 1;
+transform: scale(1);
+}
+
+.imagem-projeto {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+min-height: 260px;
+}
+
+.projeto-conteudo {
+padding: 2rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.titulo-projeto {
+font-size: clamp(1.5rem, 2vw, 2.2rem);
+color: var(--claro);
+margin-bottom: 1rem;
+}
+
+.paragrafo-projetos {
+font-size: 1.08rem;
+line-height: 1.8;
+color: rgba(229, 231, 235, 0.9);
+}
+
+.contato {
 padding: 6rem 2rem;
 border-radius: 16px;
-
-
 }
-.contato-titulo{
+
+.contato-titulo {
 text-align: center;
 font-size: 2.5rem;
 margin-bottom: 20px;
@@ -348,50 +438,32 @@ transform: translateY(-20px);
 
 
 @media (max-width: 768px) {
-
-    
     .menu {
         flex-direction: column !important;
         gap: 1rem !important;
         padding: 10px 0 !important;
     }
 
-.navegacao {
-        flex-direction: column; 
+    .navegacao {
+        flex-direction: column;
         height: auto;
-        padding: 10px 0;
-        position: relative !important; 
         padding: 1rem !important;
-}
+        position: relative !important;
+    }
 
-    .navegacao__link {
-        font-size: 16px; 
-        padding: 5px 0;
-    
     .cabecalho {
         padding-top: 2rem !important;
         min-height: auto !important;
         text-align: center !important;
-}
+    }
 
-    .apresentacao__imagem {
-        width: 80%; 
-        max-width: 300px;
-        height: auto; 
-        margin: 0 auto; 
-    
     .foto-perfil {
         width: 250px !important;
         height: 250px !important;
         object-fit: cover !important;
         margin-bottom: 20px !important;
-}
+    }
 
-    
-    .apresentacao__conteudo {
-        width: 100%;
-        text-align: center;
-    
     h1 {
         font-size: 2rem !important;
         padding: 0 10px !important;
@@ -401,19 +473,18 @@ transform: translateY(-20px);
         font-size: 1.2rem !important;
     }
 
-    .sobre-titulo, .formacao-titulo, .contato-titulo {
+    .sobre-titulo,
+    .formacao-titulo,
+    .contato-titulo {
         font-size: 2rem !important;
     }
 
     .sobre-paragrafo {
         font-size: 1.1rem !important;
-}
+    }
 
-    .apresentacao_conteudo_titulo {
-        font-size: 24px; 
-    
     .projetos-caixa {
         grid-template-columns: 1fr !important;
         padding: 2rem 1rem !important;
-}
+    }
 }
