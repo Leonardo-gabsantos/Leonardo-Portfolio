@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="src/style.css">
   <title>Leonardo | Portfólio</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
 
   <main id="inicio" class="cabecalho">
     
-    <img src="../Img/foto-portfolio.jpg" alt="Foto de Leonardo Gabriel" class="foto-perfil">
+    <img src="Img/foto-portfolio.jpg" alt="Foto de Leonardo Gabriel" class="foto-perfil">
     <h1>Leonardo Gabriel dos Santos</h1>
     <p class="paragrafo-img">Desenvolvedor de sistemas</p>
     
@@ -57,7 +57,7 @@
 
     <div class="projetos-list">
       <article class="projetos-card">
-        <img src="../Img/Foto nexus logo.png" alt="Logo do projeto Assistente Virtual de Vacinação" class="imagem-projeto">
+        <img src="Img/Foto-nexus-logo.png" alt="Logo do projeto Assistente Virtual de Vacinação" class="imagem-projeto">
 
         <div class="projeto-conteudo">
           <h3 class="titulo-projeto">Assistente Virtual de Vacinação integrado com o Telegram</h3>
@@ -71,7 +71,7 @@
       </article>
 
       <article class="projetos-card">
-        <img src="../Img/MusicStreamIMG.png" alt="Tela do projeto MusicStream" class="imagem-projeto">
+        <img src="Img/MusicStreamIMG.png" alt="Tela do projeto MusicStream" class="imagem-projeto">
 
         <div class="projeto-conteudo">
           <h3 class="titulo-projeto">MusicStream - Player de música integrado com a API da Audius</h3>
@@ -90,11 +90,11 @@
     <h2 class = "contato-titulo">Entre em contato por whatsapp</h2>
       <form class ="formulario-contato" id ="Formulario" onsubmit="enviarWhatsapp(event)">
         <div class = "nome-form">  
-          <input placeholder="Nome" class ="Campo-form" id="nome">  
+          <input placeholder="Nome" class ="Campo-form" id="nome" required>  
         </div>
 
         <div class = "grupo-form">
-          <textarea class= "text-form" placeholder = "Digite sua mensagem" rows="4" id="mensagem"></textarea>
+          <textarea class= "text-form" placeholder = "Digite sua mensagem" rows="4" id="mensagem" required></textarea>
         </div>
         <button type="submit" class="botao-form">Enviar whatsapp</button>
       </form>
